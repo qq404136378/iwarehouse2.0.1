@@ -1,7 +1,10 @@
 package com.prt.iwarehouse.modules.login;
 
+import com.prt.iwarehouse.pojo.StorageList;
 import com.prt.iwarehouse.pojo.User;
 import com.zzz.mvp.base.IBaseView;
+
+import java.util.List;
 
 import io.reactivex.schedulers.Schedulers;
 
@@ -21,8 +24,13 @@ interface LoginContract  {
 
        void saveIpInfoFail(String msg);
 
+        void showStorageList(List<StorageList> storageList);
 
        void readUserInfoSuccess(User user);
+
+       void changeStorageSuccess(String msg);
+
+       void changeStorageFail(String msg);
     }
     interface  ILoginPresenter  {
        void toLogin(String userName,String password);
@@ -34,5 +42,7 @@ interface LoginContract  {
        void saveUserInfo(String username,String password);
 
        void readUserInfo();
+
+       void changeStorage(String storageUuid);
     }
 }

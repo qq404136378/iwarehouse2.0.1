@@ -21,7 +21,12 @@ public class UserModel extends BaseModel{
                  .getRetrofitApiService()
                  .login(userName,password,"android");
      }
-
+     public Observable<HttpResult<Object>> changeStorage(String uuid){
+         return RetrofitManager
+                 .getInstance()
+                 .getRetrofitApiService()
+                 .changeStorage(uuid);
+     }
      //测试接口
     public Observable<HttpResult<Object>> test() {
         return RetrofitManager

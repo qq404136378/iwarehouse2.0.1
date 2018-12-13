@@ -1,5 +1,6 @@
 package com.prt.iwarehouse.modules.login;
 
+import com.prt.iwarehouse.app.Constant;
 import com.prt.iwarehouse.http.HttpResult;
 import com.prt.iwarehouse.http.IHttpCallback;
 import com.prt.iwarehouse.http.ProgressObserver;
@@ -37,7 +38,15 @@ public class LoginPresenter extends BasePresenter<LoginContract.ILoginView>
                        new IHttpCallback<HttpResult<TokenUser>>() {
                    @Override
                    public void onSuccess(HttpResult<TokenUser> tokenUserHttpResult) {
-                       getView().LoginSuccess(tokenUserHttpResult.getMsg());
+                       Constant.token=tokenUserHttpResult.getData().getToken();
+                     if(!tokenUserHttpResult.getData().getStorageName().equals("")) {
+                         Constant.storageName = tokenUserHttpResult.getData().getStorageName();
+                         getView().LoginSuccess(tokenUserHttpResult.getMsg());
+                     }else{
+                         if(tokenUserHttpResult.getData().getStorageList()!=null){
+                             getView().showStorageList(tokenUserHttpResult.getData().getStorageList());
+                         }
+                     }
                    }
 
                    @Override
@@ -106,6 +115,23 @@ public class LoginPresenter extends BasePresenter<LoginContract.ILoginView>
                     }
                 });
     }
+     @Override
+    public  void changeStorage(String storageUuid){
+        userModel.changeStorage(storageUuid)
+                .subscribeOn(Schedulers.io())
+                .unsubscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new ProgressObserver<HttpResult<Object>>(getContext(), true, new IHttpCallback<HttpResult<Object>>() {
+                    @Override
+                    public void onSuccess(HttpResult<Object> objectHttpResult) {
+                       getView().changeStorageSuccess(objectHttpResult.getMsg());
+                    }
 
+                    @Override
+                    public void onError(String message) {
+                       getView().changeStorageFail(message);
+                    }
+                }));
+    }
 
 }

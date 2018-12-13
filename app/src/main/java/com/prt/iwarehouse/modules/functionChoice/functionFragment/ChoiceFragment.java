@@ -36,7 +36,6 @@ public class ChoiceFragment extends BaseMvpFragment implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
-        KLoggerToast.showText(getContext(),"aaa",Toast.LENGTH_SHORT);
         switch (view.getId()){
             case R.id.frg_second_tv_function_electron:
                 fragment=new ChoiceFragmentElectron();

@@ -9,13 +9,18 @@ import android.widget.Toast;
 
 import com.prt.baselibrary.log.KLoggerToast;
 import com.prt.iwarehouse.R;
+import com.prt.iwarehouse.app.Constant;
 import com.prt.iwarehouse.broadcast.ProgressBroadCast;
 import com.prt.iwarehouse.dialog.IpSettingDialog;
+import com.prt.iwarehouse.dialog.StorageListDialog;
 import com.prt.iwarehouse.http.RetrofitManager;
 import com.prt.iwarehouse.modules.functionChoice.FunctionChoiceActivity;
+import com.prt.iwarehouse.pojo.StorageList;
 import com.prt.iwarehouse.pojo.User;
 import com.zzz.mvp.base.BaseMvpActivity;
 import com.zzz.mvp.inject.InjectPresenter;
+
+import java.util.List;
 
 public class LoginActivity extends BaseMvpActivity implements View.OnClickListener,LoginContract.ILoginView {
     private EditText et_account;
@@ -24,6 +29,7 @@ public class LoginActivity extends BaseMvpActivity implements View.OnClickListen
     private TextView tv_setting;
     private String ipInfo="";
     private  ProgressBroadCast progressBroadCast;
+    private StorageListDialog storageListDialog;
     @InjectPresenter
     private LoginPresenter loginPresenter;
     @Override
@@ -63,8 +69,8 @@ public class LoginActivity extends BaseMvpActivity implements View.OnClickListen
         if(account.isEmpty()||password.isEmpty()){
             KLoggerToast.showText(LoginActivity.this,"请输入用户名或密码", Toast.LENGTH_SHORT);
         }else
-            LoginSuccess("登陆成功");
-           // loginPresenter.toLogin(account,password);
+         //   LoginSuccess("登陆成功");
+            loginPresenter.toLogin(account,password);
     }
     //展示IP设置窗口
     private void showIpDialog() {
@@ -87,7 +93,7 @@ public class LoginActivity extends BaseMvpActivity implements View.OnClickListen
         loginPresenter.saveUserInfo(account,password);
         Intent intent=new Intent(LoginActivity.this, FunctionChoiceActivity.class);
         startActivity(intent);
-        KLoggerToast.showText(LoginActivity.this,"登陆成功",Toast.LENGTH_SHORT);
+        KLoggerToast.showText(LoginActivity.this,msg,Toast.LENGTH_SHORT);
     }
 
     @Override
@@ -140,4 +146,30 @@ public class LoginActivity extends BaseMvpActivity implements View.OnClickListen
          progressBroadCast=new ProgressBroadCast();
          registerReceiver(progressBroadCast,intentFilter);
      }
+    @Override
+    public void showStorageList(List<StorageList> storageList) {
+         storageListDialog=new StorageListDialog.Builder(LoginActivity.this)
+                .setStorageList(storageList)
+                .builder();
+        storageListDialog.setSelectStorageListener(new StorageListDialog.SelectStorageListener() {
+            @Override
+            public void selectStorage(String storageUuid) {
+                loginPresenter.changeStorage(storageUuid);
+            }
+        });
+        storageListDialog.show();
+    }
+
+    @Override
+    public void changeStorageSuccess(String msg) {
+        if(storageListDialog!=null&&storageListDialog.isShowing()){
+            storageListDialog.dismiss();
+        }
+        KLoggerToast.showText(LoginActivity.this,msg+"再次点击登陆",Toast.LENGTH_SHORT);
+    }
+
+    @Override
+    public void changeStorageFail(String msg) {
+        KLoggerToast.showText(LoginActivity.this,msg,Toast.LENGTH_SHORT);
+    }
 }

@@ -1,11 +1,9 @@
 package com.prt.iwarehouse.modules.functionChoice;
 
 import android.view.KeyEvent;
-import android.widget.FrameLayout;
 
 import com.prt.iwarehouse.R;
 import com.prt.iwarehouse.app.Constant;
-import com.prt.iwarehouse.modules.function.FunctionFragment;
 import com.prt.iwarehouse.modules.functionChoice.functionFragment.ChoiceFragment;
 import com.zzz.mvp.base.BaseMvpActivity;
 import com.zzz.mvp.base.BaseMvpFragment;
