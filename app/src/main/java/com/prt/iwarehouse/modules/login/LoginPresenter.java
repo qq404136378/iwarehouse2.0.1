@@ -40,8 +40,7 @@ public class LoginPresenter extends BasePresenter<LoginContract.ILoginView>
                    public void onSuccess(HttpResult<TokenUser> tokenUserHttpResult) {
                        Constant.token=tokenUserHttpResult.getData().getToken();
                      if(!tokenUserHttpResult.getData().getStorageName().equals("")) {
-                         Constant.storageName = tokenUserHttpResult.getData().getStorageName();
-                         getView().LoginSuccess(tokenUserHttpResult.getMsg());
+                         getView().LoginSuccess(tokenUserHttpResult.getMsg(),tokenUserHttpResult.getData().getStorageName());
                      }else{
                          if(tokenUserHttpResult.getData().getStorageList()!=null){
                              getView().showStorageList(tokenUserHttpResult.getData().getStorageList());

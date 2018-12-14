@@ -14,7 +14,7 @@ import io.reactivex.schedulers.Schedulers;
 
 interface LoginContract  {
     interface  ILoginView extends IBaseView{
-       void LoginSuccess(String msg);
+       void LoginSuccess(String msg,String storageName);
 
        void LoginFail(String msg);
 

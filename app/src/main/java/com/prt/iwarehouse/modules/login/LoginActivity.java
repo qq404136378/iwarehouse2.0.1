@@ -69,7 +69,7 @@ public class LoginActivity extends BaseMvpActivity implements View.OnClickListen
         if(account.isEmpty()||password.isEmpty()){
             KLoggerToast.showText(LoginActivity.this,"请输入用户名或密码", Toast.LENGTH_SHORT);
         }else
-         //   LoginSuccess("登陆成功");
+          //  LoginSuccess("登陆成功","电子仓");
             loginPresenter.toLogin(account,password);
     }
     //展示IP设置窗口
@@ -87,11 +87,12 @@ public class LoginActivity extends BaseMvpActivity implements View.OnClickListen
     }
 
     @Override
-    public void LoginSuccess(String msg) {
+    public void LoginSuccess(String msg,String storageName) {
         String account=et_account.getText().toString().trim();
         String password=et_password.getText().toString().trim();
         loginPresenter.saveUserInfo(account,password);
         Intent intent=new Intent(LoginActivity.this, FunctionChoiceActivity.class);
+        intent.putExtra("storageName",storageName);
         startActivity(intent);
         KLoggerToast.showText(LoginActivity.this,msg,Toast.LENGTH_SHORT);
     }

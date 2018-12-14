@@ -4,8 +4,12 @@ package com.prt.iwarehouse.model;
 
 import com.prt.iwarehouse.http.HttpResult;
 import com.prt.iwarehouse.http.RetrofitManager;
+import com.prt.iwarehouse.pojo.Storage;
+import com.prt.iwarehouse.pojo.StorageList;
 import com.prt.iwarehouse.pojo.TokenUser;
 import com.zzz.mvp.base.BaseModel;
+
+import java.util.List;
 
 import io.reactivex.Observable;
 
@@ -27,6 +31,12 @@ public class UserModel extends BaseModel{
                  .getRetrofitApiService()
                  .changeStorage(uuid);
      }
+     public Observable<HttpResult<Storage>> getStorageList(){
+         return  RetrofitManager
+                 .getInstance()
+                 .getRetrofitApiService()
+                 .getStorageList();
+     }
      //测试接口
     public Observable<HttpResult<Object>> test() {
         return RetrofitManager
@@ -34,4 +44,5 @@ public class UserModel extends BaseModel{
                 .getRetrofitApiService()
                 .test();
     }
+
 }

@@ -2,11 +2,10 @@ package com.prt.iwarehouse.modules.functionChoice.functionFragment;
 
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.prt.baselibrary.log.KLoggerToast;
 import com.prt.iwarehouse.R;
-import com.prt.iwarehouse.app.Constant;
+import com.prt.iwarehouse.modules.functionChoice.functionFragment.ChoiceElectron.ChoiceElectronFragment;
+import com.prt.iwarehouse.modules.functionChoice.functionFragment.ChoiceElectron.ChoiceSmtFragment;
 import com.zzz.mvp.base.BaseMvpFragment;
 
 /**
@@ -38,10 +37,10 @@ public class ChoiceFragment extends BaseMvpFragment implements View.OnClickListe
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.frg_second_tv_function_electron:
-                fragment=new ChoiceFragmentElectron();
+                fragment=new ChoiceElectronFragment();
                 break;
             case R.id.frg_second_tv_function_smt:
-                fragment=new ChoiceFragmentSmt();
+                fragment=new ChoiceSmtFragment();
                 break;
             default:
                 break;
@@ -52,7 +51,6 @@ public class ChoiceFragment extends BaseMvpFragment implements View.OnClickListe
                         .beginTransaction()
                         .replace(R.id.function_fl_content, fragment)
                         .commit();
-            Constant.FLAG_FUNCTION=1;
         }
 
     }
