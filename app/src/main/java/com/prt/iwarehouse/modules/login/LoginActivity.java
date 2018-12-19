@@ -69,8 +69,8 @@ public class LoginActivity extends BaseMvpActivity implements View.OnClickListen
         if(account.isEmpty()||password.isEmpty()){
             KLoggerToast.showText(LoginActivity.this,"请输入用户名或密码", Toast.LENGTH_SHORT);
         }else
-          //  LoginSuccess("登陆成功","电子仓");
-            loginPresenter.toLogin(account,password);
+            LoginSuccess("登陆成功","电子仓");
+         //   loginPresenter.toLogin(account,password);
     }
     //展示IP设置窗口
     private void showIpDialog() {
@@ -91,6 +91,7 @@ public class LoginActivity extends BaseMvpActivity implements View.OnClickListen
         String account=et_account.getText().toString().trim();
         String password=et_password.getText().toString().trim();
         loginPresenter.saveUserInfo(account,password);
+        Constant.user=new User(account,password);
         Intent intent=new Intent(LoginActivity.this, FunctionChoiceActivity.class);
         intent.putExtra("storageName",storageName);
         startActivity(intent);

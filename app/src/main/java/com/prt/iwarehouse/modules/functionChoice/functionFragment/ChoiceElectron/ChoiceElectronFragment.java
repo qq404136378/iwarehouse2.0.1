@@ -1,6 +1,7 @@
 package com.prt.iwarehouse.modules.functionChoice.functionFragment.ChoiceElectron;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
@@ -20,7 +21,7 @@ public class ChoiceElectronFragment extends BaseMvpFragment implements View.OnCl
     private StorageListDialog storageListDialog;
     @InjectPresenter
     ChoicePresenter choiceElectronPresenter;
-    private Intent intent=new Intent(getActivity(), HomeActivity.class);
+    private Intent intent;
     @Override
     protected int createView() {
         return R.layout.fragment_function_electron;
@@ -73,7 +74,12 @@ public class ChoiceElectronFragment extends BaseMvpFragment implements View.OnCl
 
     }
     private void goHomeActivity(String function) {
-        intent.putExtra("function",function);
+        intent=new Intent(getActivity(), HomeActivity.class);
+        Bundle bundle=new Bundle();
+        bundle.putString("function",function);
+        bundle.putString("storage","电子仓");
+        //intent.putExtra("function",function);
+        intent.putExtra("msg",bundle);
         getActivity().startActivity(intent);
     }
 

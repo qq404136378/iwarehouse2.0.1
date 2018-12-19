@@ -6,7 +6,7 @@
     android:orientation="vertical">
 
     <FrameLayout
-        android:id="@+id/fl_put"
+        android:id="@+id/function_put_fl_put"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
@@ -22,7 +22,7 @@
         android:layout_height="46dp">
 
         <TextView
-            android:id="@+id/tv_perform_put"
+            android:id="@+id/function_put_tv_perform_put"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -38,7 +38,7 @@
 
 
         <TextView
-            android:id="@+id/tv_disperse_pack"
+            android:id="@+id/function_put_disperse_pack"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -54,7 +54,7 @@
 
 
         <TextView
-            android:id="@+id/tv_disperse_put"
+            android:id="@+id/function_put_disperse_put"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
