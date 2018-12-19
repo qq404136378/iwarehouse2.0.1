@@ -38,5 +38,9 @@ public class HomeActivity extends BaseMvpActivity {
                .beginTransaction()
                    .replace(R.id.home_fl_home,new PutFragment())
                  .commit();
+
+
+
+
     }
 }
