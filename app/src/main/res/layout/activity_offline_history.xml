@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/offlineToolbarBackground"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_account"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="3dp"
+            android:layout_marginStart="3dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/offline_history_title"
+            android:textColor="@color/offlineToolbarTextColor"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:orientation="horizontal"
+            android:paddingEnd="5dp"
+            android:paddingRight="5dp"
+            tools:ignore="RtlSymmetry">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/item_num"
+                android:textColor="@color/offlineToolbarTextColor"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_item_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/offlineToolbarTextColor"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_history"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:overScrollMode="never" />
+
+    <TextView
+        android:id="@+id/tv_upload_date"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/btn_background"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:text="@string/offline_history_upload"
+        android:textColor="@color/btnCommonTextColor"
+        android:textSize="18sp" />
+</LinearLayout>

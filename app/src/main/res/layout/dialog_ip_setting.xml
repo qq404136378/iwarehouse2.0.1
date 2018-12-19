@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="280dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_common_background"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="7dp"
+        android:text="@string/dialog_ip_setting"
+        android:textColor="@color/CommonDialogTitleTextColor"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+
+    <EditText
+        android:id="@+id/et_ip"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="15dp"
+        android:background="@drawable/input_box_background"
+        android:gravity="center"
+        android:hint="@string/dialog_ip_setting_hint"
+        android:maxLines="1"
+        android:padding="3dp"
+        android:paddingTop="10dp"
+        android:singleLine="true" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/CommonDialogDividerColor" />
+
+    <LinearLayout
+        android:id="@+id/ll_btn_pos_neg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="visible">
+        <TextView
+            android:id="@+id/tv_setting"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/dialog_common_two_btn_left_background"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:padding="13dp"
+            android:text="@string/dialog_ip_setting_set"
+            android:textColor="@color/CommonDialogBtnTextColor" />
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/CommonDialogDividerColor" />
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/dialog_common_two_btn_right_background"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:padding="13dp"
+            android:text="@string/dialog_seat_container_info_cancel"
+            android:textColor="@color/CommonDialogBtnTextColor" />
+    </LinearLayout>
+</LinearLayout>

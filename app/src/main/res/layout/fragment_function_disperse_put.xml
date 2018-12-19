@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/function_disperse_put_container_code"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_container_code"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/input_box_background"
+            android:gravity="center"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/function_disperse_put_seat_code"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_seat_code"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/input_box_background"
+            android:gravity="center"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom|center"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/tv_cancel_doing"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:background="@drawable/btn_background"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="@string/btn_cancel_doing"
+            android:textColor="@color/btnCommonTextColor"
+            android:textSize="18sp" />
+    </LinearLayout>
+</LinearLayout>

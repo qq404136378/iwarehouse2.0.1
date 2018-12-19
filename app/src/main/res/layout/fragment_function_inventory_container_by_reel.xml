@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="当前容器"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_container_inventory"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/input_box_background"
+            android:gravity="center"
+            android:textSize="15sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="10dp">
+        <TextView
+            android:id="@+id/tv_reserve"
+            android:layout_width="120px"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:background="@drawable/btn_background"
+            android:text="备用输入"
+            android:textColor="@color/btnCommonTextColor"
+            android:clickable="true"
+            android:focusable="true"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_inventory_reel_area2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        tools:ignore="NestedWeights">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bomTableHeadColor"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="容器内物料详情"
+                android:textColor="@color/bomTableHeadTextColor" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/tv_perform_item_num"
+                android:layout_toStartOf="@id/tv_perform_item_num"
+                android:text="@string/item_num"
+                android:textColor="@color/bomTableHeadTextColor"
+                android:textSize="12sp"
+                tools:ignore="RelativeOverlap" />
+            <TextView
+                android:id="@+id/tv_perform_item_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="2dp"
+                android:layout_marginRight="2dp"
+                android:textColor="@color/bomTableHeadTextColor"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_inventory_reel2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:overScrollMode="never" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/bomTableDivider" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:padding="10dp">
+            <TextView
+                android:id="@+id/tv_inventory_ok"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:gravity="center"
+                android:background="@drawable/btn_background"
+                android:text="确认盘点"
+                android:textColor="@color/btnCommonTextColor"
+                android:textSize="18sp"
+                android:clickable="true"
+                android:focusable="true"/>
+            <TextView
+
+                android:layout_width="20px"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:clickable="true"
+                android:focusable="true"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/offlineToolbarBackground"
+        android:gravity="center"
+        android:text="@string/offline"
+        android:textColor="@color/offlineToolbarTextColor"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="3dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/offline_account" />
+
+                <TextView
+                    android:id="@+id/tv_offline_account"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="3dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/offline_storage" />
+
+                <TextView
+                    android:id="@+id/tv_offline_storage_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_history"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/btn_background"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="@string/offline_history"
+            android:textColor="@color/btnCommonTextColor"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/putDivider" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/bom_stock_bom_id"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_bom_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/input_box_background"
+            android:gravity="center"
+            android:hint="@string/offline_please_scan_bom_id"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/offline_reel_id"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_reel_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/input_box_background"
+            android:gravity="center"
+            android:hint="@string/offline_please_reel_id"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/offline_stock_count"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/et_stock_count"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/input_box_background"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_complete"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/btn_background"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="@string/offline_complete"
+            android:textColor="@color/btnCommonTextColor"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom|center"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
+            android:text="@string/offline_warn"
+            android:textColor="@color/offlineWarn"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_cancel_doing"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:background="@drawable/btn_background"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="@string/btn_cancel_doing"
+            android:textColor="@color/btnCommonTextColor"
+            android:textSize="18sp" />
+    </LinearLayout>
+</LinearLayout>

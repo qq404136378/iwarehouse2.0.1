@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            tools:ignore="UselessParent">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/bom_stock_bom_id"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_bom_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/input_box_background"
+                android:gravity="center"
+                android:hint="@string/bom_stock_please_scan_bom_id"
+                android:textSize="15sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="10dp">
+            <TextView
+                android:id="@+id/tv_reserve"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:textSize="15sp"
+                android:background="@drawable/btn_background"
+                android:text="备用输入"
+                android:textColor="@color/btnCommonTextColor"
+                android:clickable="true"
+                android:focusable="true"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_perform_stock_area"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            tools:ignore="NestedWeights">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bomTableHeadColor"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/bom_stock_perform_stock"
+                    android:textColor="@color/bomTableHeadTextColor" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/tv_perform_item_num"
+                    android:layout_toStartOf="@id/tv_perform_item_num"
+                    android:text="@string/item_num"
+                    android:textColor="@color/bomTableHeadTextColor"
+                    android:textSize="12sp"
+                    tools:ignore="RelativeOverlap" />
+
+                <TextView
+                    android:id="@+id/tv_perform_item_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginRight="2dp"
+                    android:textColor="@color/bomTableHeadTextColor"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_perform_stock"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:overScrollMode="never" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/bomTableDivider" />
+        </LinearLayout>
+
+
+        <!--****************************************-->
+        <LinearLayout
+            android:id="@+id/ll_batch_stock_area"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bomTableHeadColor"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/bom_stock_batch_stock"
+                    android:textColor="@color/bomTableHeadTextColor" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/tv_batch_item_num"
+                    android:layout_toStartOf="@id/tv_batch_item_num"
+                    android:text="@string/item_num"
+                    android:textColor="@color/bomTableHeadTextColor"
+                    android:textSize="12sp"
+                    tools:ignore="RelativeOverlap" />
+
+                <TextView
+                    android:id="@+id/tv_batch_item_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginRight="2dp"
+                    android:textColor="@color/bomTableHeadTextColor"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_batch_stock"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:overScrollMode="never" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/bomTableDivider" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom|center"
+        android:orientation="vertical"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:id="@+id/tv_cancel_doing"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:background="@drawable/btn_background"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="@string/bom_stock_cancel_doing"
+            android:textColor="@color/btnCommonTextColor"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

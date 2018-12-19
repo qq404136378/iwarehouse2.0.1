@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/fl_put"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        tools:ignore="UselessLeaf" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/putDivider" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp">
+
+        <TextView
+            android:id="@+id/tv_perform_put"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/function_father_view_selector"
+            android:gravity="center"
+            android:text="@string/function_preform_put"
+            android:textColor="@drawable/function_father_text_selector" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/putDivider" />
+
+
+        <TextView
+            android:id="@+id/tv_disperse_pack"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/function_father_view_selector"
+            android:gravity="center"
+            android:text="@string/function_disperse_pack"
+            android:textColor="@drawable/function_father_text_selector" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/putDivider" />
+
+
+        <TextView
+            android:id="@+id/tv_disperse_put"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/function_father_view_selector"
+            android:gravity="center"
+            android:text="@string/function_disperse_put"
+            android:textColor="@drawable/function_father_text_selector" />
+    </LinearLayout>
+</LinearLayout>

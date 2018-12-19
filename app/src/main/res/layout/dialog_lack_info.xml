@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_common_title_background"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="3dp"
+            android:text="@string/dialog_lack_info_title"
+            android:textColor="@color/CommonDialogTitleTextColor"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/item_num"
+                android:textSize="10sp"
+                tools:ignore="SmallSp" />
+
+            <TextView
+                android:id="@+id/tv_item_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:textColor="@color/CommonDialogTitleTextColor"
+                android:textSize="10sp"
+                tools:ignore="SmallSp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/CommonDialogHeadColor"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:gravity="center"
+            android:text="@string/material_id"
+            android:textColor="@color/CommonDialogHeadTextColor" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/lack_num"
+            android:textColor="@color/CommonDialogHeadTextColor" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_lack_info"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/white_background"
+        android:layout_weight="1"
+        android:overScrollMode="never" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="是否要继续进行出库?"
+        android:textColor="@color/CommonDialogTitleTextColor"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:background="@drawable/white_background"
+        android:padding="10dp"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@drawable/white_background" />
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:gravity="center"
+       android:orientation="horizontal">
+    <TextView
+        android:id="@+id/tv_i_know"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_common_two_btn_left_background"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="确定"
+        android:textColor="@color/CommonDialogBtnTextColor" />
+       <TextView
+           android:layout_width="1dp"
+           android:layout_height="match_parent"
+           android:background="@color/bomTableHeadColor"
+           />
+       <TextView
+           android:id="@+id/tv_i_cancel"
+           android:layout_width="0dp"
+           android:layout_weight="1"
+           android:layout_height="wrap_content"
+           android:background="@drawable/dialog_common_two_btn_right_background"
+           android:clickable="true"
+           android:focusable="true"
+           android:gravity="center"
+           android:padding="10dp"
+           android:text="取消"
+           android:textColor="@color/CommonDialogBtnTextColor" /> />
+   </LinearLayout>
+</LinearLayout>

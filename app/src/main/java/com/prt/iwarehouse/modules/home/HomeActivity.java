@@ -1,4 +1,5 @@
 package com.prt.iwarehouse.modules.home;
+import android.widget.FrameLayout;
 import android.widget.TextView;
 import com.prt.iwarehouse.R;
 import com.prt.iwarehouse.app.Constant;
@@ -9,6 +10,7 @@ public class HomeActivity extends BaseMvpActivity {
     private TextView tv_current_account;
     private TextView tv_current_storage;
     private TextView tv_scanner;
+    private FrameLayout fl_home;
 
     @Override
     protected int setContentView() {
@@ -21,6 +23,7 @@ public class HomeActivity extends BaseMvpActivity {
         tv_current_function=this.findViewById(R.id.home_tv_current_function);
         tv_current_storage=this.findViewById(R.id.home_tv_current_storage);
         tv_scanner=this.findViewById(R.id.home_tv_scanner);
+        fl_home=this.findViewById(R.id.home_fl_home);
     }
 
     @Override

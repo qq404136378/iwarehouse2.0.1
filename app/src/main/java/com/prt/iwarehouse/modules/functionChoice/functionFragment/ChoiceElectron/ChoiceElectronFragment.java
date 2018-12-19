@@ -1,11 +1,13 @@
 package com.prt.iwarehouse.modules.functionChoice.functionFragment.ChoiceElectron;
 
+import android.content.Intent;
 import android.view.View;
 import android.widget.Toast;
 
 import com.prt.baselibrary.log.KLoggerToast;
 import com.prt.iwarehouse.R;
 import com.prt.iwarehouse.dialog.StorageListDialog;
+import com.prt.iwarehouse.modules.home.HomeActivity;
 import com.prt.iwarehouse.pojo.Storage;
 import com.zzz.mvp.base.BaseMvpFragment;
 import com.zzz.mvp.inject.InjectPresenter;
@@ -18,7 +20,7 @@ public class ChoiceElectronFragment extends BaseMvpFragment implements View.OnCl
     private StorageListDialog storageListDialog;
     @InjectPresenter
     ChoicePresenter choiceElectronPresenter;
-
+    private Intent intent=new Intent(getActivity(), HomeActivity.class);
     @Override
     protected int createView() {
         return R.layout.fragment_function_electron;
@@ -43,19 +45,24 @@ public class ChoiceElectronFragment extends BaseMvpFragment implements View.OnCl
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.frg_electron_btn_put:
-                KLoggerToast.showText(getActivity(),"点击了put", Toast.LENGTH_SHORT);
+            //    KLoggerToast.showText(getActivity(),"点击了put", Toast.LENGTH_SHORT);
+                goHomeActivity("put");
                 break;
             case R.id.frg_electron_btn_stock:
                 KLoggerToast.showText(getActivity(),"点击了stock", Toast.LENGTH_SHORT);
+                goHomeActivity("out");
                 break;
             case R.id.frg_electron_btn_car:
                 KLoggerToast.showText(getActivity(),"点击了car", Toast.LENGTH_SHORT);
+                goHomeActivity("car");
                 break;
             case R.id.frg_electron_btn_inventory:
                 KLoggerToast.showText(getActivity(),"点击了inventory", Toast.LENGTH_SHORT);
+                goHomeActivity("inventory");
                 break;
             case R.id.frg_electron_btn_more:
                 KLoggerToast.showText(getActivity(),"点击了more", Toast.LENGTH_SHORT);
+               goHomeActivity("more");
                 break;
             case  R.id.frg_electron_tv_function_choice:
                 choiceElectronPresenter.getStorageList();
@@ -63,6 +70,11 @@ public class ChoiceElectronFragment extends BaseMvpFragment implements View.OnCl
             default:
                 break;
         }
+
+    }
+    private void goHomeActivity(String function) {
+        intent.putExtra("function",function);
+        getActivity().startActivity(intent);
     }
 
     @Override

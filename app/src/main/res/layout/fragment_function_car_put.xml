@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="盘料部分"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:gravity="center"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/function_perform_put_reel_id"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_reel_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/input_box_background"
+            android:gravity="center"
+            android:layout_marginRight="20dp"
+            android:textSize="15sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="小车编号"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_car_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/input_box_background"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:textSize="15sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="小车站位"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_seat_code"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginRight="10dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/input_box_background"
+            android:gravity="center"
+            android:textSize="15sp" />
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="取消"
+            android:textColor="@color/btnCommonTextColor"
+            android:textSize="16dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:background="@drawable/btn_background"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/function_perform_put_seat_code_check"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_seat_code_check"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/input_box_background"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:textSize="15sp" />
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="容器部分"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:gravity="center"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/function_disperse_pack_container_code"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_container_code"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/input_box_background"
+            android:gravity="center"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_detail"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/btn_background"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="@string/function_disperse_pack_detail"
+            android:textColor="@color/btnCommonTextColor"
+            android:layout_marginRight="20dp"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:padding="10dp">
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/function_disperse_pack_reel_id"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/tv_reel_id_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/input_box_background"
+            android:gravity="center"
+            android:layout_marginRight="20dp"
+            android:textSize="15sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+    <TextView
+        android:id="@+id/tv_complete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_background"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:padding="4dp"
+        android:text="容器装箱"
+        android:textColor="@color/btnCommonTextColor"
+        android:textSize="16sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom|center"
+        android:padding="5dp">
+
+
+        <!--<TextView
+            android:id="@+id/tv_cancel_doing"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_weight="10"
+            android:background="@drawable/btn_background"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/btnCommonTextColor"
+            android:textSize="18sp" />
+        <TextView
+
+            android:layout_width="20px"
+            android:layout_height="42dp"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:clickable="true"
+            android:focusable="true"/>-->
+        <TextView
+            android:id="@+id/tv_put_cancle"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_weight="10"
+            android:gravity="center"
+            android:background="@drawable/btn_background"
+            android:text="完成装车"
+            android:textColor="@color/btnCommonTextColor"
+            android:textSize="18sp"
+            android:clickable="true"
+            android:focusable="true"/>
+    </LinearLayout>
+</LinearLayout>

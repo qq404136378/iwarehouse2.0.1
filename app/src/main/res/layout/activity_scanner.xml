@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="450dp">
+    <!--app:qrcv_barcodeRectHeight条码扫描框的宽度
+            qrcv_borderSize扫描框的宽度
+            qrcv_cornerColor扫描框的颜色
+            qrcv_cornerLength扫描框边角线的长度
+            qrcv_cornerSize扫描框边角线的宽度
+            qrcv_customScanLineDrawable扫描线的图片资源「默认的扫描线图片样式不能满足你的需求时使用，设置该属性后 qrcv_isShowDefaultScanLineDrawable、qrcv_scanLineSize、qrcv_scanLineColor 将失效」
+            qrcv_isBarcode是否是扫条形码
+            qrcv_isCenterVertical扫描框是否垂直居中，该属性为true时会忽略 qrcv_topOffset 属性
+            qrcv_isOnlyDecodeScanBoxArea    是否只识别扫描框区域的二维码
+            qrcv_isScanLineReverse扫描线是否来回移动
+            qrcv_isShowDefaultGridScanLineDrawable是否显示默认的网格图片扫描线
+            qrcv_isShowTipBackground是否显示提示文案的背景
+            qrcv_isShowTipTextAsSingleLine是否把提示文案作为单行显示
+            qrcv_isTipTextBelowRect提示文案是否在扫描框的底部
+            qrcv_maskColor除去扫描框，其余部分阴影颜色
+            qrcv_qrCodeTipText
+            qrcv_rectWidth  扫描框的宽度
+            qrcv_scanLineColor扫描线的颜色「扫描线和默认的扫描线图片的颜色」
+            qrcv_scanLineMargin扫描线距离上下或者左右边框的间距
+            qrcv_scanLineSize扫描线的宽度
+            qrcv_toolbarHeight   Toolbar 的高度，通过该属性来修正由 Toolbar 导致扫描框在垂直方向上的偏差
+            qrcv_topOffset扫描框距离 toolbar 底部的距离-->
+    <cn.bingoogolapple.qrcode.zxing.ZXingView
+        android:id="@+id/zxingview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:qrcv_animTime="1000"
+        app:qrcv_barCodeTipText="将条码放入框内，即可自动扫描"
+        app:qrcv_barcodeRectHeight="140dp"
+        app:qrcv_borderColor="@android:color/white"
+        app:qrcv_borderSize="1dp"
+        app:qrcv_cornerColor="@color/colorPrimaryDark"
+        app:qrcv_cornerLength="20dp"
+        app:qrcv_cornerSize="3dp"
+        app:qrcv_customScanLineDrawable="@mipmap/qrcode_default_scan_line"
+        app:qrcv_isBarcode="false"
+        app:qrcv_isCenterVertical="false"
+        app:qrcv_isOnlyDecodeScanBoxArea="false"
+        app:qrcv_isScanLineReverse="true"
+        app:qrcv_isShowDefaultGridScanLineDrawable="false"
+        app:qrcv_isShowDefaultScanLineDrawable="true"
+        app:qrcv_isShowTipBackground="true"
+        app:qrcv_isShowTipTextAsSingleLine="false"
+        app:qrcv_isTipTextBelowRect="false"
+        app:qrcv_maskColor="#33FFFFFF"
+        app:qrcv_qrCodeTipText="将二维码/条码放入框内，即可自动扫描"
+        app:qrcv_rectWidth="200dp"
+        app:qrcv_scanLineColor="@color/colorPrimaryDark"
+        app:qrcv_scanLineMargin="0dp"
+        app:qrcv_scanLineSize="0.5dp"
+        app:qrcv_tipTextColor="@android:color/white"
+        app:qrcv_tipTextSize="12sp"
+        app:qrcv_toolbarHeight="56dp"
+        app:qrcv_topOffset="90dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bomStateNoSelected"
+        >
+        <TextView
+            android:id="@+id/tv_qr"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:text="二维码"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:clickable="true"
+            android:focusable="true"
+
+            android:background="@color/bomItemMaterialBackground"/>
+        <TextView
+            android:id="@+id/tv_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:text="条形码"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:clickable="true"
+            android:focusable="true"
+
+            android:background="@color/bomItemMaterialBackground"/>
+        <TextView
+            android:id="@+id/tv_light"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:text="闪光灯"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:clickable="true"
+            android:focusable="true"
+
+            android:background="@color/bomItemMaterialBackground"/>
+    </LinearLayout>
+</LinearLayout>

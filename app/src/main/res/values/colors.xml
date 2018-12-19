@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#007aff</color>
+    <color name="colorPrimaryDark">#006fe7</color>
+    <color name="colorAccent">#007aff</color>
+    <color name="black">#000000</color>
+
+    <color name="inputBoxStroke">#a0a0a0</color>
+    <color name="btnCommonTextColor">#fcfcfc</color>
+    <color name="btnCommonSolidNoPressed">#007aff</color>
+    <color name="btnCommonSolidPressed">#006fe7</color>
+    <color name="itemCommonSolidNoPressed">#fcfcfc</color>
+    <color name="itemCommonSolidPressed">#a0a0a0</color>
+    <!-- 对话框 -->
+    <color name="CommonDialogBackgroundColor">#fcfcfc</color>
+    <color name="CommonDialogTitleTextColor">#333333</color>
+    <color name="CommonDialogHeadColor">#007aff</color>
+    <color name="CommonDialogHeadTextColor">#f1f1f1</color>
+    <color name="CommonDialogDividerColor">#505050</color>
+    <color name="CommonDialogBtnSolidPressed">#e3e3e3</color>
+    <color name="CommonDialogBtnSolidNoPressed">#fcfcfc</color>
+    <color name="CommonDialogBtnTextColor">#1843c3</color>
+    <color name="CommonDialogItemTextColor">#333333</color>
+
+    <!--SplashActivity相关-->
+    <color name="splashAppNameTextColor">#252525</color>
+    <!--LoginActivity相关-->
+    <color name="loginToolbarBackground">#007aff</color>
+    <color name="loginToolbarTextColor">#f8f8f9</color>
+    <color name="loginEditSolid">#ffffff</color>
+    <color name="loginEditStroke">#007aff</color>
+    <color name="loginBtnLoginTextColor">#f8f8f9</color>
+    <color name="loginOfflineModeTextColor">#007aff</color>
+    <!--FunctionActivity相关-->
+    <color name="functionToolbarBackground">#007aff</color>
+    <color name="functionToolbarTextColor">#f8f8f9</color>
+    <color name="functionTitleSolid">#454545</color>
+    <color name="functionTitleTextColor">#f8f8f9</color>
+    <color name="functionPressed">#cfcfcf</color>
+    <color name="functionNoPressed">#b5b5b6</color>
+    <!--HomeActivity相关-->
+    <color name="homeToolbarBackground">#007aff</color>
+    <color name="homeToolbarBackgroundPressed">#006fe7</color>
+    <color name="homeToolbarBackgroundNoPressed">#00000000</color>
+    <color name="homeToolbarTextColor">#f8f8f9</color>
+    <!-- 出库相关 -->
+    <color name="bomTableTitleTextColor">#333333</color>
+    <color name="bomTableDivider">#007aff</color>
+    <color name="bomTableHeadColor">#007aff</color>
+    <color name="bomTableHeadTextColor">#f1f1f1</color>
+    <color name="bomStateSelected">#007aff</color>
+    <color name="bomStateNoSelected">#767676</color>
+    <color name="bomItemMaterialBackground">#7db7b7b7</color>
+    <color name="bomItemMaterialTextColor">#333333</color>
+    <!-- 入库相关 -->
+    <color name="putDivider">#007aff</color>
+    <color name="putStroke">#007aff</color>
+    <color name="putBtnSelected">#007aff</color>
+    <color name="putBtnSelectedTextColor">#f1f1f1</color>
+    <color name="putBtnNoSelected">#f1f1f1</color>
+    <color name="putBtnNoSelectedTextColor">#007aff</color>
+    <!--offlineActivity相关 -->
+    <color name="offlineToolbarBackground">#007aff</color>
+    <color name="offlineToolbarTextColor">#f8f8f9</color>
+    <color name="offlineDivider">#007aff</color>
+    <color name="offlineWarn">#e7e2001b</color>
+</resources>
