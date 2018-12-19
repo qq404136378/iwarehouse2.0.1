@@ -10,7 +10,7 @@ import java.util.List;
  * Created by 锴锴兴 on 2018/12/14.
  */
 
-interface ChoiceElectronContract {
+interface ChoiceContract {
     interface IChoiceElectronView extends IBaseView{
         void getStorageListSuccess(Storage storageList);
 

@@ -5,11 +5,8 @@ import com.prt.iwarehouse.http.IHttpCallback;
 import com.prt.iwarehouse.http.ProgressObserver;
 import com.prt.iwarehouse.model.UserModel;
 import com.prt.iwarehouse.pojo.Storage;
-import com.prt.iwarehouse.pojo.StorageList;
 import com.zzz.mvp.base.BasePresenter;
 import com.zzz.mvp.inject.InjectModel;
-
-import java.util.List;
 
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
@@ -18,8 +15,8 @@ import io.reactivex.schedulers.Schedulers;
  * Created by 锴锴兴 on 2018/12/14.
  */
 
-public class ChoiceElectronPresenter extends BasePresenter<ChoiceElectronContract.IChoiceElectronView>
-                              implements  ChoiceElectronContract.IChoiceElectronPresenter{
+public class ChoicePresenter extends BasePresenter<ChoiceContract.IChoiceElectronView>
+                              implements  ChoiceContract.IChoiceElectronPresenter{
    @InjectModel
    private  UserModel userModel;
     @Override

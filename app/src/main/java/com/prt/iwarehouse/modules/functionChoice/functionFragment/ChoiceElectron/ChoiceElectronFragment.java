@@ -7,20 +7,17 @@ import com.prt.baselibrary.log.KLoggerToast;
 import com.prt.iwarehouse.R;
 import com.prt.iwarehouse.dialog.StorageListDialog;
 import com.prt.iwarehouse.pojo.Storage;
-import com.prt.iwarehouse.pojo.StorageList;
 import com.zzz.mvp.base.BaseMvpFragment;
 import com.zzz.mvp.inject.InjectPresenter;
-
-import java.util.List;
 
 /**
  * Created by 锴锴兴 on 2018/12/12.
  */
 
-public class ChoiceElectronFragment extends BaseMvpFragment implements View.OnClickListener,ChoiceElectronContract.IChoiceElectronView {
+public class ChoiceElectronFragment extends BaseMvpFragment implements View.OnClickListener,ChoiceContract.IChoiceElectronView {
     private StorageListDialog storageListDialog;
     @InjectPresenter
-    ChoiceElectronPresenter choiceElectronPresenter;
+    ChoicePresenter choiceElectronPresenter;
 
     @Override
     protected int createView() {
