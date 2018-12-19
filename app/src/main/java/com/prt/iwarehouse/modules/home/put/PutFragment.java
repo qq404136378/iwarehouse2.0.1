@@ -22,6 +22,9 @@ public class PutFragment extends FunctionFragment{
 
     @Override
     protected int createView() {
+
+
+
         return R.layout.fragment_function_put;
     }
 
