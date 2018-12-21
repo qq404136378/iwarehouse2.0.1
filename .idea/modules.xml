@@ -3,10 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://E:\GY\AndroidStudy\wkx000-iwarehouse2.0-master\iwarehouse2.0.3\app\app.iml" filepath="E:\GY\AndroidStudy\wkx000-iwarehouse2.0-master\iwarehouse2.0.3\app\app.iml" />
+      <module fileurl="file://E:/GY/AndroidStudy/wkx000-iwarehouse2.0-master/iwarehouse2.0.3/app/app.iml" filepath="E:/GY/AndroidStudy/wkx000-iwarehouse2.0-master/iwarehouse2.0.3/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/base-library/base-library.iml" filepath="$PROJECT_DIR$/base-library/base-library.iml" />
-      <module fileurl="file://E:\GY\AndroidStudy\wkx000-iwarehouse2.0-master\iwarehouse2.0.3\base-library\base-library.iml" filepath="E:\GY\AndroidStudy\wkx000-iwarehouse2.0-master\iwarehouse2.0.3\base-library\base-library.iml" />
-      <module fileurl="file://E:\GY\AndroidStudy\wkx000-iwarehouse2.0-master\iwarehouse2.0.3\iwarehouse2.0.iml" filepath="E:\GY\AndroidStudy\wkx000-iwarehouse2.0-master\iwarehouse2.0.3\iwarehouse2.0.iml" />
+      <module fileurl="file://E:/GY/AndroidStudy/wkx000-iwarehouse2.0-master/iwarehouse2.0.3/base-library/base-library.iml" filepath="E:/GY/AndroidStudy/wkx000-iwarehouse2.0-master/iwarehouse2.0.3/base-library/base-library.iml" />
+      <module fileurl="file://E:/GY/AndroidStudy/wkx000-iwarehouse2.0-master/iwarehouse2.0.3/iwarehouse2.0.iml" filepath="E:/GY/AndroidStudy/wkx000-iwarehouse2.0-master/iwarehouse2.0.3/iwarehouse2.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/iwarehouse2.0.1.iml" filepath="$PROJECT_DIR$/iwarehouse2.0.1.iml" />
       <module fileurl="file://$PROJECT_DIR$/iwarehouse2.0.3.iml" filepath="$PROJECT_DIR$/iwarehouse2.0.3.iml" />
     </modules>
   </component>

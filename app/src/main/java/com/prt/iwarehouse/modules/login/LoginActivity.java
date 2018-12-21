@@ -22,6 +22,8 @@ import com.zzz.mvp.inject.InjectPresenter;
 
 import java.util.List;
 
+//登录系统
+
 public class LoginActivity extends BaseMvpActivity implements View.OnClickListener,LoginContract.ILoginView {
     private EditText et_account;
     private EditText et_password;
